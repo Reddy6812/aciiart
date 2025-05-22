@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aciiart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>aciiart</h1>
+    <div id="controls">
+      <button id="tab-text" class="active">Text to ASCII</button>
+      <button id="tab-image">Image to ASCII</button>
+    </div>
+
+    <div id="text-section" class="section">
+      <textarea id="text-input" placeholder="Enter your text here..."></textarea>
+      <div class="row">
+        <label for="font-select">Font:</label>
+        <select id="font-select"></select>
+        <label for="width-input">Width:</label>
+        <input type="number" id="width-input" value="80" />
+      </div>
+      <button id="convert-text">Convert</button>
+      <pre id="text-output"></pre>
+    </div>
+
+    <div id="image-section" class="section hidden">
+      <input type="file" id="image-input" accept="image/*" />
+      <div class="row">
+        <label for="width-image-input">Width:</label>
+        <input type="number" id="width-image-input" value="80" />
+      </div>
+      <button id="convert-image">Convert</button>
+      <pre id="image-output"></pre>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/figlet@1.2.5/umd/figlet.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html> 
